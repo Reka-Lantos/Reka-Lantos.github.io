@@ -63,15 +63,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <p>In practice, the estimation process of the graphical lasso can be computationally expensive, and the standard centralised interior point solvers cannot scale well.  To address this, the Alternating Direction Method of Multipliers (ADMM) has been implemented, splitting the problem into local subproblems that are parallelisable and scalable. It can converge to the optimal solution without global coordination, which is more efficient.</p>
         <p>The Graphical Lasso estimator with ADMM solver was implemented using GGLasso, a recently developed and highly customisable python package to provide a more streamlined solution for implementing estimators. </p>
         <p>To tune the regularisation parameter, a custom cross-validation procedure was developed to select the parameter which can produce the highest log-likelihood value on the data. This method also introduced smoothing to encourage some level of temporal consistency between the results and further eliminate the effects of noise and outlying values. </p>
+        <p>The results of the portfolio were compared against a set of benchmark portfolios to gain insight into its comparative performance. These portfolios included three naïve methods which did not require optimisation, the 1/N (Equal Weight), Market Capitalisation Weighted (MCW), Monte Carlo Minimum Variance Portfolio (MCMVP), and two optimised portfolios, the classical Minimum-Variance Portfolio (MVP) and the Ledoit-Wolf Portfolio (LWP).</p>
         <div id="contact" class="w3-container w3-center w3-padding-32">
           <h2 class="w3-wide">RESULTS</h2>
         </div>
 
+        <p>The results showed that tuning the regularisation parameter can offer more optimal performance and makes the model more adaptable to unseen data. </p>
+        <p>The experiments showed that the Graphical Lasso method can substantially and consistently reduce the risk of the portfolio. In comparison to the benchmark, this portfolio had the lowest annual volatility in both the daily and monthly data frequency.</p>
         <iframe src="https://reka-lantos.github.io/volatilityViolinDaily.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height=auto width=auto allowfullscreen></iframe>
 
+        <p>The analysis examined the effect of varying transaction costs and investor sentiment regarding risk levels. This found that regardless of the transaction costs, the more simple methods such as 1/N and MCMVP can outperform the optimised strategies, as rebalancing these portfolios requires significantly less turnover. Compared to the optimised portfolios, the Graphical Lasso method provided the lowest transaction cost, at times 50% lower than the classic MVP method. This analysis highlighted that simple portfolio construction methods could have lower costs than methods which require optimisation, but they are the least optimal portfolios from a mean-variance perspective as their volatility and variance in returns can be substantial. </p>
         <iframe src="https://reka-lantos.github.io/transactionCost.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height=auto width=auto allowfullscreen></iframe>
 
-        <img src="Sharpe.png" style="width:120%">
+        <p>The table shows, the portfolio constructed based on the Graphical Lasso estimator had the highest Sharpe ratio, therefore, the highest risk-adjusted relative return. (The ratio represents the additional amount the investor receives per unit of increase in risk.)</p>
+        <img src="Sharpe.png" style="width:70%">
   
       </div>
 
