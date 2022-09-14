@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reka Lantos Dissertation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+</head>
+<body>
+
+
+  <!-- Navigation (Stays on Top) -->
+  <div class="w3-top w3-bar w3-black">
+    <a href="index.html" class="w3-bar-item w3-button">Poster</a>
+    <a href="relatedWorks.html" class="w3-bar-item w3-button">Related Work</a>
+    <a href="networkResults.html" class="w3-bar-item w3-button">Network</a>
+    <a href="results.html" class="w3-bar-item w3-button">Results</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  
+  <!-- Page Navigation (Stays on Top) -->
+  <div class="w3-left w3-bar w3-gray">
+    <a href="#GGMS" class="w3-bar-item w3-button">Gaussian Graphical Models</a>
+    <a href="#network" class="w3-bar-item w3-button">Network</a>
+    <a href="#analysis" class="w3-bar-item w3-button">Analysis</a>
+    </div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    <div class="w3-right w3-padding-32">Dissertation</div>
+    <div class="w3-left w3-padding-32">Reka Lantos</div>
+      <hr id="about">
+  
+      <!-- About Section -->
+      <div class="w3-container w3-padding-16 w3-center">  
+          <h4><b>Network</b></h4>
+          <p>Part of</p>
+        <h3>Systematic Study of Graphical Lasso as a Portfolio Allocation Strategy</h3>
+      </div>
+      <hr>  
+      <div class="w3-container w3-padding-32">  
+        <div id="GGMS" class="w3-container w3-padding-32">
+          <h2 class="w3-wide">GAUSSIAN GRAPHICAL MODELS</h2>
+        </div>
+        <p>Graphical models can describe both conditional and unconditional dependence structures in data. One of the most popular models applied to capture these dependencies is the GGM, and algorithms like Graphical Lasso can recover the graph structure of the model, which can then be visualised as a network.
+            As the GGM is linked to the network, this network is based on the linear dependencies of the variables; therefore, it can be used to map out how the assets in the portfolio are connected and able to predict one another. In this network, the assets are represented as nodes, and the relationship tying them together is the connection between the nodes. Where there is no connection between the nodes, those assets are conditionally independent. The nodes can also be highly interconnected, linking with several different assets, while others might be independent or tied to only one other asset. To make the network easier to interpret, a threshold value was used only to highlight the most defining relationships in the data. This threshold was determined at 300, and it was applied to the absolute value of the estimate of the precision matrix.</p>
+        <div class="w3-container w3-padding-32">  
+            <div id="network" class="w3-container w3-padding-32">
+              <h2 class="w3-wide">NETWORK</h2>
+            </div>
+        <p>As illustrated below, the structure of the network can be divided into clusters, which are groups of assets closely connected and interlinked with each other. Most of these clusters are connected through single or multiple connections, forming a spread- out network. There is a cluster of five assets that are not connected to the rest of the data. Other assets are more loosely linked to these clusters, as they are connected to only one asset in it or an asset which is one or several links away from the cluster. These formations are visualised as lines spreading out of the cluster.</p>
+        <iframe src="https://reka-lantos.github.io/network.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+        <p></p>
+        <div class="w3-container w3-padding-32">  
+            <div id="analysis" class="w3-container w3-padding-32">
+              <h2 class="w3-wide">ANALYSIS</h2>
+            </div>
+            <p>An example part of the network is analysed to illustrate the use of the network and highlight the type of connections in the data. The explored part is the cluster of assets which are not interconnected with the rest of the network. This section is made up of the following companies:</p>
+            <ul>
+                <li>Kellog Co - Food Processing</li>
+                <li>Abbott Laboratories - Medical Equipment, Supplies and Distribution</li>
+                <li>Ford Motor Co - Auto Manufacturer</li>
+                <li>Edison International - Electric Utilities</li>
+                <li>Baker Hughes Co - Oil Related Services and equipment.</li>
+              </ul>
+            <p>These companies are all from different sectors; however, Auto Manufacturing, Electric Utilities and Oil Related Services industries are relatively closely related, which can be a potential reason for their connection. Heavy manufacturing requires significant energy, and tendencies in the auto industry can be influenced by the movements in the oil sector, which could indicate that the returns on assets are affected by the changes in the price of another stock from a different industry. After closer examination of the value chains of these companies, several additional factors can contribute to these connections. For example, one of the suppliers of Edison International is Mitsubishi Heavy Industries Ltd, a company specialising in developing energy systems; it is also engaged in manufacturing steel-making machinery and mechanical systems as well as has several customers in the Oil Related Services for these systems. Baker and Hughes Co, similar to Mitsubishi Heavy Industries Ltd, designs and manufactures heavy machinery in the oil, gas and energy industries. Therefore, changes in the economy or the industry could affect both of these companies, indirectly further connecting Edison International to Baker and Hughes Co.</p>
+            <p>These assets are also connected via less expected suppliers such as Pricewater- houseCoopers LLP (PwC), a business support services supplier of both Ford Motor Co and Edison International. Furthermore, these companies share major customers and suppliers from the same regions. Other than the USA, Ford Motor Co, Abbott Laboratories and Edison International have suppliers from Canada; Ford Motor Co and Baker Hughes Co trade with Australian companies, whereas Kellogg Co and Abbott Laboratories, have suppliers from Italy. Even though the reasoning behind the connection of these companies is likely to be more complex, analysing these networks can uncover some interesting and unexpected information about the direct and indirect relationships between assets.</p>
+            <img src="cluster.png" style="width:100%">
+
+ <!-- Footer -->
+ <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-center">
+      <p>Powered by <a target=”_blank” href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+</body>
+</html>
