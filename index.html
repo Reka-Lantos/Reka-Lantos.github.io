@@ -26,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div id="home" class="w3-content">
 
   <!-- Navigation (Stays on Top) -->
-<div class="w3-top w3-bar w3-white">
+<div class="w3-top w3-bar w3-black">
   <a href="#home" class="w3-bar-item w3-button">Poster</a>
   <a href="#RelatedWork" class="w3-bar-item w3-button">Related Work</a>
   <a href="#Implementation" class="w3-bar-item w3-button">Implementation</a>
@@ -50,22 +50,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     </div>
     <hr>
     <div class="w3-container w3-padding-32 w3-center">  
-      <div class="w3-container w3-teal">
+      <div class="w3-container w3-black">
         <h5><b>Context</b></h5>
       </div>
         <p>Finding the optimal portfolio allocation is one of the major challenges investors face when managing their investments. One of the well-established strategies to address this problem is the Mean-Variance Portfolio strategy, as it can optimise the allocation of instruments in terms of maximising returns for a given level of risk or minimising risk for a given level of returns. However, for this optimisation to take full effect, investors are required to actively adjust the composition and weights of their portfolio, which, in the case of a high volume of trades, can incur significant transaction costs. Additionally, this optimisation relies on the covariance of assets which is difficult to estimate accurately when the data is time-varying and high-dimensional. </p>
-        <div class="w3-container w3-teal">
+        <div class="w3-container w3-black">
           <h5><b>Objective</b></h5>
         </div>
         <p>The aim of this study was to analyse if the regularisation method, Graphical Lasso, can be used as a portfolio optimisation strategy. Previous studies have found that Lasso regularisation can reduce the estimation errors in the covariance matrix and produce stable minimum variance portfolios while mitigating the effects of transaction costs. However, most often, these studies have used a set of well-diversified portfolios to construct the portfolio instead of individual assets or implemented the strategy without any shorting restrictions. To evaluate the robustness of this method under different conditions, this project tested the Graphical Lasso estimator on a high-dimensional dataset constructed from the data of 146 individual assets over 27 years. The study also analysed the effects of tuning the regularisation parameter, for which a bespoke smoothing cross-validation method was designed. Additionally, different data frequencies, as well as varying levels of trading costs, were used to measure their effect on the performance of the strategy. </p>
-        <div class="w3-container w3-teal">
+        <div class="w3-container w3-black">
           <h5><b>Methods</b></h5>
         </div>
         <p>The Graphical Lasso estimator can reduce estimation errors by applying Lasso regularisation to the inverse covariance matrix to increase sparsity, which prevents overfitting noise in the data and interpretability of the relationships within the data. </p>
         <p>In practice, the estimation process of the graphical lasso can be computationally expensive, and the standard centralised interior point solvers cannot scale well.  To address this, the Alternating Direction Method of Multipliers (ADMM) has been implemented, splitting the problem into local subproblems that are parallelisable and scalable. It can converge to the optimal solution without global coordination, which is more efficient.</p>
         <p>The Graphical Lasso estimator with ADMM solver was implemented using GGLasso, a recently developed and highly customisable python package to provide a more streamlined solution for implementing estimators. </p>
         <p>To tune the regularisation parameter, a custom cross-validation procedure was developed to select the parameter which can produce the highest log-likelihood value on the data. This method also introduced smoothing to encourage some level of temporal consistency between the results and further eliminate the effects of noise and outlying values. </p>
-        <div class="w3-container w3-teal">
+        <div class="w3-container w3-black">
           <h5><b>Results</b></h5>
         </div>
 
@@ -152,7 +152,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </div>
 
 <div class="w3-container w3-padding-32 w3-center">  
-  <div class="w3-container w3-teal">
+  <div class="w3-container w3-black">
     <h5><b>Conclusion</b></h5>
   </div>
     <p>The results of this study showed that the Graphical Lasso estimator could be a consistently reliable strategy to reduce volatility, as it can outperform other minimum variance portfolio optimisation methods while earning closely similar competitive returns. Additionally, in comparison to the other optimisation strategies, Graphical Lasso offers the lowest transaction cost as it requires the lowest amount of trades to keep the portfolio at an optimal balance.
