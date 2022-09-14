@@ -47,39 +47,41 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </div>
       <hr>  
       <div class="w3-container w3-padding-32">  
-        <div id="Markowitz" class="w3-containerw3-center w3-padding-32">
+        <div id="Markowitz" class="w3-container w3-padding-32">
           <h2 class="w3-wide">MARKOWITZ PORTFOLIO THEORY</h2>
         </div>
-          <p>The Markowitz mean-variance portfolio theory is one of the fundamental theories of portfolio optimisation, as it considers the risk and returns trade-off. To find the most efficient portfolio, this approach analyses various possible portfolios constructed from different combinations of instruments. The theory is built on the idea of diversification, that by owning more than one asset type, the idiosyncratic risk can be minimised. To select the optimal portfolio weights, vector w, the expected returns and risk of the assets are assessed in combination with one another. Therefore optimisation requires both the estimates of the vector of expected returns and the covariance matrix of returns (Markowitz, 1952). </p>
-     <div class="w3-container w3-padding-32 w3-center">  
-        <div id="Volatility" class="w3-container w3-center w3-padding-32">
+          <p>The Markowitz mean-variance portfolio theory is one of the fundamental theories of portfolio optimisation, as it can be used to optimise the allocation of instruments in a portfolio in terms of maximising returns for a given level of risk or to minimise variance (risk) for a given return. These portfolios form an efficient frontier curve, below which the portfolios are all sub-optimal as they provide lower returns for the level of risk (Markowitz, 1952). With this method of diversification, it is possible to reduce the idiosyncratic risk significantly, however, investors still have to account for systematic risk.
+        </p>
+        <img src="frontier.png" style="width:100%">
+     <div class="w3-container w3-padding-32">  
+        <div id="Volatility" class="w3-container w3-padding-32">
           <h2 class="w3-wide">VOLATILITY TIMING</h2>
         </div>
         <p>One strategy from a mean-variance perspective to mitigate the effects of systematic risk is volatility timing, by which the investor adjusts the allocation of the portfolio based on the forecasted volatility of the market. When the market is more volatile, the investor aims to lower the risk exposure of their portfolio by making more conservative choices. In contrast, they adopt a more aggressive strategy in good market conditions. This strategy can be adopted based on past volatility as well as forecasted volatility which can be calculated with the use of models such as Exponentially Weighted Moving Average (EWMA), or AutoRegressive Conditional Heteroskedasticity (ARCH), Generalized AutoRegressive Conditional Heteroskedasticity (GARCH) (Engle, 1982). Research from the last few decades demonstrated that volatility timing can outperform efficient but static portfolios with the same expected return and volatility in both short horizons (Fleming et al., 2001, 2002) and long-horizon (Moreira and Muir, 2019). Additionally, these strategies are proven effective in overcoming the challenge of changing market conditions, as they make the exposure of the risk adaptable to market conditions. The volatility timing strategies is proven to increase Sharpe ratios with a robust performance even when transaction cost is taken into account. (Fleming et al., 2001; Moreira and Muir, 2016).
         </p>
-        <div class="w3-container w3-padding-32 w3-center">  
-            <div id="Transaction" class="w3-container w3-center w3-padding-32">
+        <div class="w3-container w3-padding-32">  
+            <div id="Transaction" class="w3-container w3-padding-32">
               <h2 class="w3-wide">TRANSACTION COST</h2>
             </div>
         <p>However, for volatility timing to take full effect, investors are required to actively adjust the composition and weights of their portfolios based on the dynamics of the market conditions, which in the presence of transaction costs, can reduce returns and outweigh the benefits of otherwise optimal strategies.
             One of the common approaches to mitigating the effects of transaction cost is to allow investors to deviate from the zero-cost optimal position by selecting a smoother and more conservative portfolio that moves in the direction of the optimal portfolio to limit turnover and reduce trading costs (Garleanu and Pedersen, 2013). Another form of this strategy is to gradually trade toward the aim portfolio based on the current and future optimal portfolio, to incorporate more of the longer-lasting effects rather than temporary fluctuation (Garleanu and Pedersen, 2016). Another approach developed by Kirby and Osdiek implements a tuning parameter that can adjust the timing aggressiveness to exercise some control over the portfolio turnover and, therefore, the transaction cost (Kirby and Ostdiek, 2012). Even though these strategies have proven to be successful in mitigating the effects of varying levels of transaction cost, changing market conditions could make these strategies less robust, as it is unlikely that a given trading reduction rate would perform equally well during smoother and more volatile periods. Additionally, their adaptability to market changes could be affected as these strategies focus on reducing turnover at the expense of following the optimal portfolio allocation. Therefore, an approach that can detect which variations are significant in terms of volatility and market dynamics could prove to be similar, if not more effective, in reducing trading costs while still being flexible enough to adapt to the changes in market dynamics.
             </p>
 
-        <div class="w3-container w3-padding-32 w3-center">  
-            <div id="GGM" class="w3-container w3-center w3-padding-32">
+        <div class="w3-container w3-padding-32 ">  
+            <div id="GGM" class="w3-container w3-padding-32">
               <h2 class="w3-wide">GAUSSIAN GRAPHICAL MODELS</h2>
             </div>
         <p> The Gaussian Graphical Model (GGM) is a useful tool for estimating a high dimensional precision matrix and visualising the relationship within the data in a network format. When the data is continuous and assumed to be normally distributed, GGM can be estimated. As these models do not require the edge orientations to be specified, they are well applicable for spatial or relational data. GGM estimates a network of partial correlation coefficients, a measure of the linear dependence between a pair of random variables where the influence of the other variables is eliminated. These partial correlation coefficients of the precision matrix can effectively be applied for explanatory data analysis as they can highlight which variables predict one another and allow for the sparse modelling of covariance structures by graphically displaying them in a weighted network. In the network, each variable is represented as a node and the edges; in other words, the connection between the nodes represents the partial correlation. The nodes remain unconnected if there is no partial correlation between the two variables. To achieve a sparse model, the precision matrix requires regularisation; otherwise, the model becomes saturated (Epskamp et al., 2018; Murphy, 2012). </p>
         <p> Stock market data contains a massive sequence of multivariate timestamped observations, which GGM can model as a network of interacting nodes. To spot trends, detect anomalies and interpret temporal dynamics in the data, it is essential to understand the relationship between different entities and how these evolve (Hallac et al., 2017). GGM is also a useful model for data in which the number of observed samples is small compared to the dimensionality in the data, as is often the case with stock market data. These dependencies mapped out by GGM can be captured by algorithms such as the Graphical Lasso as it can recover the graph structure of the model (Kelner et al., 2020).</p>
-        <div class="w3-container w3-padding-32 w3-center">  
-            <div id="GL" class="w3-container w3-center w3-padding-32">
+        <div class="w3-container w3-padding-32">  
+            <div id="GL" class="w3-container w3-padding-32">
               <h2 class="w3-wide">GRAPHICAL LASSO</h2>
             </div>
         <p>Graphical Lasso can be used to estimate undirected sparse graphs by applying the lasso (L1) regularisation to the inverse covariance matrix (also called a precision matrix) to increase sparsity. This estimator for continuous data assumes that the observations have a Multivariate Gaussian distribution with a mean μ and the covariance Σ. If the (ij)th component of the inverse covariance matrix is zero, then the variables i and j are conditionally independent, given the other variables (Friedman et al., 2008). Due to this quality, a Graphical Lasso can be useful for portfolio construction as it can capture conditional independence between assets.
             Research shows that using a portfolio allocation strategy based on a Graphical Lasso can create robust minimum variance portfolios which are able to achieve significant out-of-sample risk reduction and improve certainty equivalent returns after transaction costs even compared to popular portfolio strategies such as 1/N, MVP and industry factor models. Research also suggests that Graphical Lasso can also be a robust strategy when calculating the allocation weights is more difficult, as it tends to be a case when a portfolio is constructed of individual assets rather than a well-diversified set of portfolios (Brodie et al., 2008; Goto and Xu, 2016; Millington and Niranjan, 2017).</p>
 
-        <div class="w3-container w3-padding-32 w3-center">  
-            <div id="ref" class="w3-container w3-center w3-padding-32">
+        <div class="w3-container w3-padding-32 ">  
+            <div id="ref" class="w3-container w3-padding-32">
             <h2 class="w3-wide">BIBLIOGRAPHY</h2>
             </div>
   
