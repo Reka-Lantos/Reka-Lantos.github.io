@@ -56,14 +56,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
           <h5><b>Objective</b></h5>
         </div>
         <p>The aim of this study was to analyse if the regularisation method, Graphical Lasso, can be used as a portfolio optimisation strategy. Previous studies have found that Lasso regularisation can reduce the estimation errors in the covariance matrix and produce stable minimum variance portfolios while mitigating the effects of transaction costs. However, most often, these studies have used a set of well-diversified portfolios to construct the portfolio instead of individual assets or implemented the strategy without any shorting restrictions. To evaluate the robustness of this method under different conditions, this project tested the Graphical Lasso estimator on a high-dimensional dataset constructed from the data of 146 individual assets over 27 years. The study also analysed the effects of tuning the regularisation parameter, for which a bespoke smoothing cross-validation method was designed. Additionally, different data frequencies, as well as varying levels of trading costs, were used to measure their effect on the performance of the strategy. </p>
-        <div class="w3-container w3-black">
+        <div class="w3-container w3-light-grey">
           <h5><b>Methods</b></h5>
         </div>
         <p>The Graphical Lasso estimator can reduce estimation errors by applying Lasso regularisation to the inverse covariance matrix to increase sparsity, which prevents overfitting noise in the data and interpretability of the relationships within the data. </p>
         <p>In practice, the estimation process of the graphical lasso can be computationally expensive, and the standard centralised interior point solvers cannot scale well.  To address this, the Alternating Direction Method of Multipliers (ADMM) has been implemented, splitting the problem into local subproblems that are parallelisable and scalable. It can converge to the optimal solution without global coordination, which is more efficient.</p>
         <p>The Graphical Lasso estimator with ADMM solver was implemented using GGLasso, a recently developed and highly customisable python package to provide a more streamlined solution for implementing estimators. </p>
         <p>To tune the regularisation parameter, a custom cross-validation procedure was developed to select the parameter which can produce the highest log-likelihood value on the data. This method also introduced smoothing to encourage some level of temporal consistency between the results and further eliminate the effects of noise and outlying values. </p>
-        <div class="w3-container w3-black">
+        <div class="w3-container w3-light-grey">
           <h5><b>Results</b></h5>
         </div>
 
@@ -150,7 +150,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </div>
 
 <div class="w3-container w3-padding-32 w3-center">  
-  <div class="w3-container w3-black">
+  <div class="w3-container w3-light-grey">
     <h5><b>Conclusion</b></h5>
   </div>
     <p>The results of this study showed that the Graphical Lasso estimator could be a consistently reliable strategy to reduce volatility, as it can outperform other minimum variance portfolio optimisation methods while earning closely similar competitive returns. Additionally, in comparison to the other optimisation strategies, Graphical Lasso offers the lowest transaction cost as it requires the lowest amount of trades to keep the portfolio at an optimal balance.
@@ -160,9 +160,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
 
 <!-- About -->
-<div id="RelatedWork" class="w3-container w3-padding-32">
-  <h1 class="w3-center">Related Works</h1>
-  <p>This is our band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div id="RelatedWork" class="w3-container w3-padding-32"  href="relatedWorks.html>
   </div>
 
 
@@ -177,10 +175,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <input class="w3-input" type="text" placeholder="Email" required name="Email">
     <input class="w3-input" type="text" placeholder="Message" required name="Message">
     <br>
-    <button class="w3-button w3-black" type="submit">SEND</button>
+    <button class="w3-button w3-light-grey" type="submit">SEND</button>
     </form>
-    
-    <img src="map.jpg" class="w3-image" style="width:100%">
     </div>
     
   
