@@ -51,6 +51,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <p>In practice, the estimation process of the graphical lasso can be computationally expensive, and the standard centralised interior point solvers cannot scale well.  To address this, the Alternating Direction Method of Multipliers (ADMM) has been implemented, splitting the problem into local subproblems that are parallelisable and scalable. It can converge to the optimal solution without global coordination, which is more efficient.</p>
         <p>The Graphical Lasso estimator with ADMM solver was implemented using GGLasso, a recently developed and highly customisable python package to provide a more streamlined solution for implementing estimators. </p>
         <p>To tune the regularisation parameter, a custom cross-validation procedure was developed to select the parameter which can produce the highest log-likelihood value on the data. This method also introduced smoothing to encourage some level of temporal consistency between the results and further eliminate the effects of noise and outlying values. </p>
+        <div class="w3-container w3-teal">
+          <h5><b>Results</b></h5>
+        </div>
+        <div class="w3-container w3-teal">
+          <h5><b>Conclusion</b></h5>
+        </div>
+        <p>The results of this study showed that the Graphical Lasso estimator could be a consistently reliable strategy to reduce volatility, as it can outperform other minimum variance portfolio optimisation methods while earning closely similar competitive returns. Additionally, in comparison to the other optimisation strategies, Graphical Lasso offers the lowest transaction cost as it requires the lowest amount of trades to keep the portfolio at an optimal balance.
+          The study also found that tuning the regularisation parameter can further improve the performance of the estimator while varying levels of transaction costs and investor risk aversion do not affect the robustness of the model. Finally, the results showed that different data frequencies do not have a consistent effect on performance; therefore, further research could be required to find a conclusive outcome. 
+          </p>
       </div>
  
 
