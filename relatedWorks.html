@@ -16,8 +16,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <!-- Navigation (Stays on Top) -->
 <div class="w3-top w3-bar w3-black">
-    <a href="#home" class="w3-bar-item w3-button">Poster</a>
-    <a href="#RelatedWork" class="w3-bar-item w3-button">Related Work</a>
+    <a href="index.html" class="w3-bar-item w3-button">Poster</a>
+    <a href="relatedWorks.html" class="w3-bar-item w3-button">Related Work</a>
     <a href="#Implementation" class="w3-bar-item w3-button">Implementation</a>
     <a href="#Results" class="w3-bar-item w3-button">Results</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
@@ -33,6 +33,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <div class="w3-container w3-padding-32 w3-center">  
           <h4><b>Interactive Poster</b></h4>
           <p>Part of</p>
-        <h3>Systematic Study of Graphical Lasso as a Portfolio Allocation Strategy</h3>
+        <h3>Related Works</h3>
       </div>
       <hr>  
+      <div class="w3-container w3-padding-32 w3-center">  
+        <div id="contact" class="w3-container w3-center w3-padding-32">
+          <h2 class="w3-wide">MARKOWITZ PORTFOLIO THEORY</h2>
+        </div>
+          <p>The Markowitz mean-variance portfolio theory is one of the fundamental theories of portfolio optimisation, as it considers the risk and returns trade-off. To find the most efficient portfolio, this approach analyses various possible portfolios constructed from different combinations of instruments. The theory is built on the idea of diversification, that by owning more than one asset type, the idiosyncratic risk can be minimised. To select the optimal portfolio weights, vector w, the expected returns and risk of the assets are assessed in combination with one another. Therefore optimisation requires both the estimates of the vector of expected returns and the covariance matrix of returns (Markowitz, 1952). </p>
+     <div class="w3-container w3-padding-32 w3-center">  
+        <div id="contact" class="w3-container w3-center w3-padding-32">
+          <h2 class="w3-wide">VOLATILITY TIMING</h2>
+        </div>
+        <p>One strategy from a mean-variance perspective to mitigate the effects of systematic risk is volatility timing, by which the investor adjusts the allocation of the portfolio based on the forecasted volatility of the market. When the market is more volatile, the investor aims to lower the risk exposure of their portfolio by making more conservative choices. In contrast, they adopt a more aggressive strategy in good market conditions. This strategy can be adopted based on past volatility as well as forecasted volatility which can be calculated with the use of models such as Exponentially Weighted Moving Average (EWMA), or AutoRegressive Conditional Heteroskedasticity (ARCH), Generalized AutoRegressive Conditional Heteroskedasticity (GARCH) (Engle, 1982). Research from the last few decades demonstrated that volatility timing can outperform efficient but static portfolios with the same expected return and volatility in both short horizons (Fleming et al., 2001, 2002) and long-horizon (Moreira and Muir, 2019). Additionally, these strategies are proven effective in overcoming the challenge of changing market conditions, as they make the exposure of the risk adaptable to market conditions. The volatility timing strategies is proven to increase Sharpe ratios with a robust performance even when transaction cost is taken into account. (Fleming et al., 2001; Moreira and Muir, 2016).
+        </p>
+        <div class="w3-container w3-padding-32 w3-center">  
+            <div id="contact" class="w3-container w3-center w3-padding-32">
+              <h2 class="w3-wide">TRANSACTION COST</h2>
+            </div>
+        <p>However, for volatility timing to take full effect, investors are required to actively adjust the composition and weights of their portfolios based on the dynamics of the market conditions, which in the presence of transaction costs, can reduce returns and outweigh the benefits of otherwise optimal strategies.
+            One of the common approaches to mitigating the effects of transaction cost is to allow investors to deviate from the zero-cost optimal position by selecting a smoother and more conservative portfolio that moves in the direction of the optimal portfolio to limit turnover and reduce trading costs (Garleanu and Pedersen, 2013). Another form of this strategy is to gradually trade toward the aim portfolio based on the current and future optimal portfolio, to incorporate more of the longer-lasting effects rather than temporary fluctuation (Garleanu and Pedersen, 2016). Another approach developed by Kirby and Osdiek implements a tuning parameter that can adjust the timing aggressiveness to exercise some control over the portfolio turnover and, therefore, the transaction cost (Kirby and Ostdiek, 2012). Even though these strategies have proven to be successful in mitigating the effects of varying levels of transaction cost, changing market conditions could make these strategies less robust, as it is unlikely that a given trading reduction rate would perform equally well during smoother and more volatile periods. Additionally, their adaptability to market changes could be affected as these strategies focus on reducing turnover at the expense of following the optimal portfolio allocation. Therefore, an approach that can detect which variations are significant in terms of volatility and market dynamics could prove to be similar, if not more effective, in reducing trading costs while still being flexible enough to adapt to the changes in market dynamics.
+            </p>
+
